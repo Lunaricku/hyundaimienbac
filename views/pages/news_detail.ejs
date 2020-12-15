@@ -1,0 +1,62 @@
+<% include ../layout/header.ejs %>
+<!--Our-Blog-->
+<section class="our_blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-8">
+                <!--article-1-->
+                <article class="article_wrap article_full_info">
+                    <div class="articale_header">
+                        <h2><%= news.news_title %></h2>
+                        <div class="article_meta">
+                            <ul>
+                                <li><i class="fa fa-user-circle-o" aria-hidden="true"></i> <a href="#"><%= news.news_author %></a></li>
+                                <li><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 20 Nov 2016</li>
+                                <li><i class="fa fa-eye" aria-hidden="true"></i> <a href="#">2053 Lượt xem</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="article_img"> <img src="<%= news.news_images %>" alt="image"> </div>
+                    <div class="article_info">
+                        <p><%- news.news_content %></p>
+                    </div>
+                    <div class="article_tag gray-bg">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="share_article ">
+                                    <h6>Share:</h6>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!--Side-bar-->
+            <aside class="col-lg-3 col-md-4">
+                <div class="sidebar_widget">
+                    <div class="widget_heading">
+                        <h5>Tìm kiếm tin tức</h5>
+                    </div>
+                    <div class="blog_search">
+                        <form action="#" method="get">
+                            <input class="form-control" name="search" type="text" placeholder="tìm kiếm...">
+                            <button type="submit" class="search_btn"><i class="fa fa-search"
+                                    aria-hidden="true"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </aside>
+            <!--/Side-bar-->
+
+        </div>
+    </div>
+</section>
+<!-- /Our-Blog-->
+<% include ../layout/footer.ejs %>

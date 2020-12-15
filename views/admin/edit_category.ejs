@@ -1,0 +1,72 @@
+<% include ../layout/header_admin.ejs %>
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Trang chủ</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="#">Dnah mục</a></li>
+                    <li class="active">chỉnh sửa</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+            <!--/.col-->
+            <div class="col-lg-7">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Chỉnh sửa danh mục</strong>
+                    </div>
+                    <div class="card-body card-block">
+                        <form action="/admin/chinh-sua-danh-muc/danh-muc=<%= cate._id %>" method="post" enctype="multipart/x-www-from-urlencoded"
+                            class="form-horizontal">
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label class=" form-control-label">Logo</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="text" value="<%= cate.category_logo %>" id="category_logo" name="category_logo" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label class=" form-control-label">Tên danh mục</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="text" value="<%= cate.category_name %>" id="category_name" name="category_name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label class=" form-control-label">Thương hiệu</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="text" value="<%= cate.category_trademark %>" id="category_trademark" name="category_trademark"
+                                        class="form-control">
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-dot-circle-o"></i> Chỉnh sửa
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- .animated -->
+</div>
+<% include ../layout/footer_admin.ejs %>

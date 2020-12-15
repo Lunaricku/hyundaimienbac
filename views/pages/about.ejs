@@ -1,0 +1,51 @@
+<% include ../layout/header.ejs %>
+<% setting.forEach(function(item){%>
+<section class="page-header aboutus_page">
+    <div class="container">
+        <div class="page-header_wrap">
+            <div class="page-heading">
+                <h1>Giới thiệu</h1>
+            </div>
+            <ul class="coustom-breadcrumb">
+                <li><a href="#">Trang chủ</a></li>
+                <li>Giới thiệu</li>
+            </ul>
+        </div>
+    </div>
+    <div class="dark-overlay"></div>
+</section>
+<section class="about_us section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="about_content row">
+                    <div>
+                        <p><%- item.introduce %></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comment_form">
+            <h6>Liên hệ tư vấn</h6>
+            <form action="#">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Họ và tên">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Địa chỉ Email">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Số điện thoại">
+                </div>
+                <div class="form-group">
+                    <textarea rows="5" class="form-control" placeholder="Nội dung"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn" value="Gửi">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<%})%>
+<% include ../layout/footer.ejs %>

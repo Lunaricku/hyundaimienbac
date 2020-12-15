@@ -1,0 +1,69 @@
+<% include ../layout/header_admin.ejs %>
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Danh sách liên hệ</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Danh sách liên hệ</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">liên hệ</strong>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <strong style="color: green"><%= mess %></strong>
+                        </div>
+                        <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Người gửi</th>
+                                    <th>Email</th>
+                                    <th>Số điện thoại</th>
+                                    <th>Nội dung</th>
+                            </thead>
+                            <tbody>
+                                <% var id = 0 %>
+                                <% contact.forEach(function(item){ id ++%>
+                                <tr>
+                                    <td><%= item.contact_name %></td>
+                                    <td><%= item.contact_email %></td>
+                                    <td><%= item.contact_phone_number %></td>
+                                    <td><%= item.contact_content %></td>
+                                    <td>
+                                        <form action='/admin/lien-he/xoa=<%= item._id %>' method="">
+                                            <button style="background-color: red; border: 1px solid red" type="submit"
+                                                class="btn btn-primary btn-sm">
+                                                <i class="fa fa-ban"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <%})%>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- .animated -->
+</div>
+<% include ../layout/footer_admin.ejs %>

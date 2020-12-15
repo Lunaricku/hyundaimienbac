@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!-- Mirrored from themes.webmasterdriver.net/carforyou/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Mar 2019 16:52:32 GMT -->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>Huyndai Bắc Ninh</title>
+  <!--Bootstrap -->
+  <link rel="stylesheet" href="/assets_client/css/bootstrap.min.css" type="text/css">
+  <!--Custome Style -->
+  <link rel="stylesheet" href="/assets_client/css/style.css" type="text/css">
+  <!--OWL Carousel slider-->
+  <link rel="stylesheet" href="/assets_client/css/owl.carousel.css" type="text/css">
+  <link rel="stylesheet" href="/assets_client/css/owl.transitions.css" type="text/css">
+  <!--slick-slider -->
+  <link href="/assets_client/css/slick.css" rel="stylesheet">
+  <!--bootstrap-slider -->
+  <link href="/assets_client/css/bootstrap-slider.min.css" rel="stylesheet">
+  <!--FontAwesome Font Style -->
+  <link href="/assets_client/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- SWITCHER -->
+  <link rel="stylesheet" id="switcher-css" type="text/css" href="/assets_client/switcher/css/switcher.css"
+    media="all" />
+  <link rel="alternate stylesheet" type="text/css" href="/assets_client/switcher/css/red.css" title="red" media="all"
+    data-default-color="true" />
+  <link rel="alternate stylesheet" type="text/css" href="/assets_client/switcher/css/orange.css" title="orange"
+    media="all" />
+  <link rel="alternate stylesheet" type="text/css" href="/assets_client/switcher/css/blue.css" title="blue"
+    media="all" />
+  <link rel="alternate stylesheet" type="text/css" href="/assets_client/switcher/css/pink.css" title="pink"
+    media="all" />
+  <link rel="alternate stylesheet" type="text/css" href="/assets_client/switcher/css/green.css" title="green"
+    media="all" />
+  <link rel="alternate stylesheet" type="text/css" href="/assets_client/switcher/css/purple.css" title="purple"
+    media="all" />
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+    href="/assets_client/images/favicon-icon/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114"
+    href="/assets_client/images/favicon-icon/apple-touch-icon-114-precomposed.html">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72"
+    href="/assets_client/images/favicon-icon/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed"
+    href="/assets_client/images/favicon-icon/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon"
+    href="https://www.instamotion.com/packages/filemanager/filemanager/api/crip-files/cmsfiles/files/hyundai.png">
+  <!-- Google-Font-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+  <!--Header-->
+  <% setting.forEach(function(item){%>
+  <header>
+
+    <div class="default-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-1 col-md-1">
+            <div class="logo"> <a href="/">
+                <img style="width: 100px;" src="<%= item.logo %>" alt="image" /></a> </div>
+          </div>
+          <div class="col-xs-8">
+            <div class="col-md-11 hidden-lg">
+              <p style="margin-bottom: 0;"><i class="fa fa-phone-square"></i><a style="color: black"
+                  href="tel:<%= item.hotline %>"> <%= item.hotline %> <i class="fa fa-user"></i><a style="color: black"
+                    href=""> Mr.Kỳ</a></a></p>
+              <p style="margin-bottom: 0;"><i class="fa fa-envelope"></i><a style="color: black"
+                  href="tel:<%= item.hotline %>"> <%= item.email %></a></p>
+            </div>
+          </div>
+          <div class="col-sm-11 col-md-11">
+            <div class="header_info">
+              <div class="header_widgets">
+                <div style="border: none" class="circle_icon"><img style="width: 50px; margin: -7px"
+                    src="https://www.cannatrac.com/static/images/users/71-1436214917.png" alt=""></div>
+                <p class="uppercase_text">Tư vấn bán hàng </p>
+                <a style="font-size: 18px" href="mailto:<%= item.email %>">Mr.Kỳ</a>
+              </div>
+              <div class="header_widgets">
+                <div class="circle_icon"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
+                <p class="uppercase_text">Hộp thư hỗ trợ : </p>
+
+                <a style="font-size: 18px" href="mailto:<%= item.email %>"><%= item.email %></a>
+              </div>
+              <div class="header_widgets">
+                <div class="circle_icon"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
+                <p class="uppercase_text">Số điện thoại liên hệ: </p>
+                <a style="font-size: 18px" href="tel:<%= item.hotline %>"><%= item.hotline %></a>
+              </div>
+              <div class="social-follow">
+                <ul>
+                  <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navigation_bar" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button id="menu_slide" data-target="#navigation" aria-expanded="false" data-toggle="collapse"
+            class="navbar-toggle collapsed" type="button"> <span class="sr-only">Toggle navigation</span> <span
+              class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+        <div class="header_wrap">
+          <div class="header_search">
+            <div id="search_toggle"><i class="fa fa-search" aria-hidden="true"></i></div>
+            <form action="#" method="get" id="header-search-form">
+              <input type="text" placeholder="Tìm kiếm..." class="form-control">
+              <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navigation">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Trang chủ</a></li>
+            <li><a href="/gioi-thieu">Giới thiệu</a></li>
+            <li><a href="/cua-hang/danh-muc">Sản phẩm</a></li>
+            <li><a href="/tin-tuc">Tin tức</a></li>
+            <li><a href="/tu-van-mua-xe">Hỗ trợ mua xe trả góp</a></li>
+            <li><a href="/lien-he">Liên hệ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation end -->
+    <div class="fix_tel">
+      <div class="ring-alo-phone ring-alo-green ring-alo-show" id="ring-alo-phoneIcon"
+        style="right: 150px; bottom: -12px;">
+        <div class="ring-alo-ph-circle"></div>
+        <div class="ring-alo-ph-circle-fill"></div>
+        <div class="ring-alo-ph-img-circle">
+
+          <a href="tel:<%= item.hotline %>"><img class="lazy" src="https://khomaythegioi.com/icon/goi.png" alt="G"></a>
+
+        </div>
+      </div>
+      <div class="tel">
+        <a href="tel:<%= item.hotline %>">
+          <p class="fone"><%= item.hotline %></p>
+        </a>
+      </div>
+    </div>
+  </header>
+  <%})%>

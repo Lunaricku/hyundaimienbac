@@ -1,0 +1,146 @@
+<% include ../layout/header_admin.ejs %>
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Forms</a></li>
+                    <li class="active">Basic</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-12">
+    <div class="animated fadeIn">
+        <div class="row">
+            <!--/.col-->
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Thêm mới sản phẩm</strong>
+                    </div>
+                    <div class="card-body card-block">
+                        <form action="/admin/them-san-pham" method="post" enctype="multipart/x-www-from-urlencoded"
+                            class="form-horizontal">
+                            <div class="row">
+                                <div class="col col-md-4">
+                                    <div class="row form-group">
+                                        <div class="col col-md-3">
+                                            <label class=" form-control-label">Ảnh sản phẩm</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <input type="text" id="car_images" name="car_images" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3">
+                                            <label class=" form-control-label">Tên sản phẩm</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <input type="text" id="car_name" name="car_name" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3">
+                                            <label class=" form-control-label">Model</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <input type="text" id="car_model" name="car_model" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3">
+                                            <label class=" form-control-label">Kích thước</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <input type="text" id="car_size" name="car_size" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3">
+                                            <label class=" form-control-label">Danh mục</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <select class="form-control" id="car_category" name="car_category">
+                                                <option value="">Chọn danh mục</option>
+                                                <% var id = 0 %>
+                                                <% cate.forEach(function(item){ id ++%>
+                                                <option value="<%= item._id %>"><%= item.category_name %> -
+                                                    <%= item.category_trademark %></option>
+                                                <%})%>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3">
+                                            <label class=" form-control-label">Trạng thái</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <select class="form-control" id="car_status" name="car_status">
+                                                <option value="">Chọn trạng thái</option>
+                                                <% var id = 0 %>
+                                                <% status.forEach(function(item){ id ++%>
+                                                <option value="<%= item._id %>"><%= item.status %></option>
+                                                <%})%>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3">
+                                            <label class=" form-control-label">Giá sản phẩm</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <input type="text" id="car_price" name="car_price" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3">
+                                            <label class=" form-control-label">ID Video mô tả</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <input type="text" id="car_video" name="car_video" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-md-8">
+                                    <div class="row form-group">
+                                        <div class="col-12 col-md-12">
+                                            <label class=" form-control-label">Mô tả sản phẩm</label>
+                                            <textarea class="form-control" id="car_content" name="car_content"
+                                                required></textarea>
+                                            <script type="text/javascript">
+                                                CKEDITOR.replace('car_content');
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-dot-circle-o"></i> Thêm mới
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm">
+                                    <i class="fa fa-ban"></i> Reset
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- .animated -->
+</div>
+<% include ../layout/footer_admin.ejs %>

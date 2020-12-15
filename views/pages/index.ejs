@@ -1,0 +1,83 @@
+<% include ../layout/header.ejs %>
+<!-- /Header -->
+
+<!-- Banners -->
+<section id="banner" class="banner-section">
+  <div class="container">
+    <div class="div_zindex">
+      <div class="row">
+        <div class="col-md-5 col-md-pull-7">
+          <div style="background: rgba(53, 52, 52, 0.651); color: white; padding: 3%; border-radius: 25px"lass="banner_content">
+            <h1 style="color: white">Hãy chọn cho mình một chiếc xe.</h1>
+            <p>Việc còn lại hãy cứ để chúng tôi thay bạn giải quyết. </p>
+            <p>- Hyundai Bắc Ninh-</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Banners -->
+
+<!-- About -->
+<section class="about-us-section section-padding">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>Chào mừng <span>đến với Hyundai Bắc Ninh</span></h2>
+      <p>Nhà phân phối xe chính hãng của Hyundai uy tín 100%</p>
+    </div>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="resentnewcar">
+        <% car.forEach(function(item){ %>
+        <div class="col-list-3">
+          <div class="recent-car-list">
+            <div class="car-info-box"> <a href="/san-pham/name=<%= item.car_name %>=<%= item._id %>"><img src="<%= item.car_images %>"
+                  class="img-responsive" alt=""></a>
+              <ul>
+                <li><i class="fa fa-calendar" aria-hidden="true"></i><%= item.car_model %> Model</li>
+                <li><i class="fa fa-map-marker" aria-hidden="true"></i><%= item.car_status.status %></li>
+              </ul>
+            </div>
+            <div class="car-title-m">
+              <h6><a href="/san-pham/name=<%= item.car_name %>=<%= item._id %>"><%= item.car_name %></a></h6>
+              <span class="price"><%= item.car_price %> VNĐ</span>
+            </div>
+          </div>
+        </div>
+        <%})%>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /About -->
+
+<!--Testimonial -->
+<section class="section-padding testimonial-section parallex-bg">
+  <div class="container div_zindex">
+    <div class="section-header white-text text-center">
+      <h2>Những nhận xét từ khách hàng</h2>
+      <p>Xe hơi Hyundai là một công ty trực thuộc tập đoàn Hyundai. Đây là công ty sản xuất xe hơi lớn nhất của Hàn Quốc và đồng thời cũng là nhà sản xuất–lắp ráp ô tô lớn thứ 3 trên thế giới tính theo sản lượng. </p>
+      <p>Chúng tôi chú trọng vào chất lượng và sự trải nghiệm của người dùng</p>
+    </div>
+    <div class="row">
+      <div id="testimonial-slider">
+        <% review.forEach(function(item){ %>
+        <div class="testimonial-m">
+          <div class="testimonial-img"> <img src="<%= item.avata %>" alt="" /> </div>
+          <div class="testimonial-content">
+            <div class="testimonial-heading">
+              <h5><%= item.name %></h5>
+              <span class="client-designation">Nhận xét tích cực</span>
+            </div>
+            <p><%= item.review %></p>
+          </div>
+        </div>
+        <%})%>
+      </div>
+    </div>
+  </div>
+  <!-- Dark Overlay-->
+  <div class="dark-overlay"></div>
+</section>
+
+<% include ../layout/footer.ejs %>

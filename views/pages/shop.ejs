@@ -1,0 +1,94 @@
+<% include ../layout/header.ejs %>
+<!--Page Header-->
+<section class="page-header listing_page">
+    <div class="container">
+        <div class="page-header_wrap">
+            <div class="page-heading">
+                <h1>Hyundai Bắc Ninh </h1>
+            </div>
+            <ul class="coustom-breadcrumb">
+                <li><a href="#">Trang chủ</a></li>
+                <li>Danh sách xe</li>
+            </ul>
+        </div>
+    </div>
+    <div class="dark-overlay"></div>
+</section>
+<!-- /Page Header-->
+
+<!--Listing-grid-view-->
+<section class="listing-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-md-push-3">
+                <div class="category">
+                    <div class="result-sorting-wrapper">
+                        <div class="sorting-count">
+                            <p>Danh sách sản phẩm</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <% car.forEach(function(item){ %>
+                        <div class="col-md-4 grid_listing">
+                            <div class="product-listing-m gray-bg">
+                                <div class="product-listing-img"> <a href="/san-pham/name=<%= item.car_name %>=<%= item._id %>"><img src="<%= item.car_images %>"
+                                            class="img-responsive" alt="image" /> </a>
+                                    <div class="label_icon"><%= item.car_status.status %></div>
+                                </div>
+                                <div class="product-listing-content">
+                                    <h5><a href="/san-pham/name=<%= item.car_name %>=<%= item._id %>"><%= item.car_name %> </a></h5>
+                                    <p class="list-price"><%= item.car_price %> VNĐ</p>
+                                    <div class="car-location"><span><%= item.car_status.status %></span></div>
+                                    <ul class="features_list">
+                                        <li><i class="fa fa-calendar" aria-hidden="true"></i><%= item.car_model %> model
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <%})%>
+                    </div>
+                </div>
+            </div>
+
+            <!--Side-Bar-->
+            <aside class="col-md-3 col-md-pull-9">
+                <div class="sidebar_widget">
+                    <div class="widget_heading">
+                        <h5><i class="fa fa-filter" aria-hidden="true"></i> Danh sách danh mục </h5>
+                    </div>
+                    <div class="sidebar_filter">
+                        <a href="/cua-hang/danh-muc %>">
+                            <div class="form-group" style="cursor: pointer;">
+                                <div class="form-control" style="padding-top: 4%;">
+                                    <span style="color: black; font-weight: 700; padding-right: 5%">Tất cả sản phẩm </span><i class="fa fa-caret-right" style="color: black; float: right;padding-top: 4%;"></i> 
+                                </div>
+                            </div>
+                        </a>
+                        <% cate.forEach(function(item){ %>
+                        <a href="/cua-hang/danh-muc=<%= item._id %>">
+                            <div class="form-group" style="cursor: pointer;">
+                                <div class="form-control" style="padding-top: 4%;">
+                                        <span style="color: black; font-weight: 700; padding-right: 5%"><%= item.category_name %> </span><i class="fa fa-caret-right" style="color: black; float: right;padding-top: 4%;"></i> 
+                                </div>
+                            </div>
+                        </a>
+                        <%})%>
+                    </div>
+                </div>
+                <div class="sidebar_widget sell_car_quote">
+                    <div class="white-text div_zindex text-center">
+                        <h3>Sell Your Car</h3>
+                        <p>Request a quote and sell your car now!</p>
+                        <a href="#" class="btn">Request a Quote <span class="angle_arrow"><i class="fa fa-angle-right"
+                                    aria-hidden="true"></i></span></a>
+                    </div>
+                    <div class="dark-overlay"></div>
+                </div>
+            </aside>
+            <!--/Side-Bar-->
+        </div>
+    </div>
+</section>
+<!--/Listing-grid-view-->
+<% include ../layout/footer.ejs %>

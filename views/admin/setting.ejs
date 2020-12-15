@@ -1,0 +1,133 @@
+<% include ../layout/header_admin.ejs %>
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Cài đặt chung</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="#">Cài đặt chung</a></li>
+                    <li class="active">Chỉnh sửa</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+            <!--/.col-->
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Cài đặt chung</strong>
+                    </div>
+                    <div>
+                        <strong style="color: green; padding: 3%;"><%= mess %></strong>
+                    </div>
+                    <div class="card-body card-block">
+                        <form action="/admin/chinh-sua-chung=<%= setting._id %>" method="post"
+                            enctype="multipart/x-www-from-urlencoded" class="form-horizontal">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="row form-group">
+                                        <div class="col col-md-3">
+                                            <label class=" form-control-label">logo</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <input type="text" value="<%= setting.logo %>" id="logo" name="logo"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3">
+                                            <label class=" form-control-label">Banner</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <input type="text" value="<%= setting.banner %>" id="banner" name="banner"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3">
+                                            <label class=" form-control-label">Email</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <input type="text" value="<%= setting.email %>" id="email" name="email"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3">
+                                            <label class=" form-control-label">Hotline</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <input type="text" value="<%= setting.hotline %>" id="hotline"
+                                                name="hotline" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3">
+                                            <label class=" form-control-label">Địa chỉ</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <input type="text" value="<%= setting.address %>" id="address"
+                                                name="address" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3">
+                                            <label class=" form-control-label">Tên công ty</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <input type="text" value="<%= setting.company %>" id="company"
+                                                name="company" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row form-group">
+                                        <div class="col-12 col-md-12">
+                                            <label class=" form-control-label">Giới thiệu</label>
+                                            <textarea class="form-control" id="introduce" name="introduce"
+                                                required><%= setting.introduce %></textarea>
+                                            <script type="text/javascript">
+                                                CKEDITOR.replace('introduce');
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row form-group">
+                                        <div class="col-12 col-md-12">
+                                            <label class=" form-control-label">Tư vấn mua xe</label>
+                                            <textarea class="form-control" id="advisory" name="advisory"
+                                                required><%= setting.advisory %></textarea>
+                                            <script type="text/javascript">
+                                                CKEDITOR.replace('advisory');
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-dot-circle-o"></i> Chỉnh sửa
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- .animated -->
+</div>
+<% include ../layout/footer_admin.ejs %>

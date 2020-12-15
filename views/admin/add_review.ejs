@@ -1,0 +1,74 @@
+<% include ../layout/header_admin.ejs %>
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Trang chủ</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="#">Nhận xét</a></li>
+                    <li class="active">Thêm mới</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+            <!--/.col-->
+            <div class="col-lg-7">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Thêm mới nhận xét</strong>
+                    </div>
+                    <div class="card-body card-block">
+                        <form action="/admin/them-moi-nhan-xet" method="post" enctype="multipart/x-www-from-urlencoded"
+                            class="form-horizontal">
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label class=" form-control-label">Avata</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="text" id="avata" name="avata" class="form-control" placeholder="Nhập URLs">
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                    <div class="col col-md-3">
+                                        <label class=" form-control-label">Họ và tên</label>
+                                    </div>
+                                    <div class="col-12 col-md-9">
+                                        <input type="text" id="name" name="name" class="form-control" placeholder="Nhập họ và tên">
+                                    </div>
+                                </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label class=" form-control-label">Nhận xét</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <textarea type="text" id="review" name="review" class="form-control" placeholder="Viết nhận xét"></textarea>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-dot-circle-o"></i> Thêm mới
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm">
+                                    <i class="fa fa-ban"></i> Reset
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- .animated -->
+</div>
+<% include ../layout/footer_admin.ejs %>

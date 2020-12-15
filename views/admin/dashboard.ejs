@@ -1,0 +1,71 @@
+<% include ../layout/header_admin.ejs %>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="start-widget-one">
+                        <div class="start-icon dib">
+                            <i style="font-size: 24px" class="fa fa-envelope text-success border-success"></i>
+                        </div>
+                        <div style="float: right" class="start-content dib">
+                            <h3><%= contact.length %> Tin nhắn</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="start-widget-one">
+                        <div class="start-icon dib">
+                            <i style="font-size: 24px" class="fa fa-car text-success border-success"></i>
+                        </div>
+                        <div style="float: right" class="start-content dib">
+                            <h3><%= car.length %> Sản phẩm</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="start-widget-one">
+                        <div class="start-icon dib">
+                            <i style="font-size: 24px" class="fa fa-book text-success border-success"></i>
+                        </div>
+                        <div style="float: right" class="start-content dib">
+                            <h3><%= news.length %> Tin tức</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="start-widget-one">
+                        <script src="https://lichngaytot.com/Scripts/jquery-ui.min.js"></script>
+                        <script src="https://lichngaytot.com/Scripts/widgetlichngay.js"></script>
+                        <script
+                            type="text/javascript">document.write('<div class="tao-lich-left widgetlich-lvsicsoft" id="widgetlich-lvsicsoft" style="width:auto;" data-urlimagen="" data-colorbordern="#dddddd" data-coloramn="#7f7f7f" data-colorduongn="#000000"></div>'); getWidgetLichNgay("widgetlich-lvsicsoft");</script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <div class="start-widget-one">
+                        <iframe width="100%" height="700px" src="https://statcounter.com/p11976940/summary/"
+                            frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../layout/footer_admin.ejs %>

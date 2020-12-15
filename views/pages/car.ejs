@@ -1,0 +1,124 @@
+<% include ../layout/header.ejs %>
+<!-- Listing-detail-header -->
+<section class="listing_detail_header">
+    <div class="container">
+        <div class="listing_detail_head white-text div_zindex row">
+            <div class="col-md-8">
+                <h2><%= car.car_name %></h2>
+            </div>
+            <div class="col-md-4">
+                <div class="price_info">
+                    <p><%= car.car_price %> VNĐ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dark-overlay"></div>
+</section>
+<!-- /Listing-detail-header -->
+
+<!--Listing-detail-->
+<section class="listing-detail">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="listing_images">
+                    <div class="listing_images_slider">
+                        <div><img style="width: 900px;" src="<%= car.car_images %>" alt="image"></div>
+                    </div>
+                    <div class="listing_images_slider_nav">
+                    </div>
+                </div>
+                <div class="main_features">
+                    <ul>
+                        <li> <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <h5><%= car.car_model %></h5>
+                            <p>Model</p>
+                        </li>
+                        <li> <i class="fa fa-cogs" aria-hidden="true"></i>
+                            <h5>Diesel</h5>
+                            <p>Fuel Type</p>
+                        </li>
+                        <li> <i class="fa fa-power-off" aria-hidden="true"></i>
+                            <h5>Automatic</h5>
+                            <p>Transmission</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="listing_more_info">
+                    <div class="listing_detail_wrap">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs gray-bg" role="tablist">
+                            <li role="presentation" class="active"><a href="#vehicle-overview "
+                                    aria-controls="vehicle-overview" role="tab" data-toggle="tab">Thông tin chi tiết
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <!-- vehicle-overview -->
+                            <div role="tabpanel" class="tab-pane active" id="vehicle-overview">
+                                <%- car.car_content %>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Vehicle-Video-->
+                    <div class="video_wrap">
+                        <h6>Video thông tin xe </h6>
+                        <div class="video-box">
+                            <iframe class="mfp-iframe" src="https://www.youtube.com/embed/<%- car.car_video %>"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!--Comment-Form-->
+                    <div class="comment_form">
+                        <h6>Liên hệ tư vấn</h6>
+                        <form action="#">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Họ và tên">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Địa chỉ Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Số điện thoại">
+                            </div>
+                            <div class="form-group">
+                                <textarea rows="5" class="form-control" placeholder="Nội dung"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="btn" value="Gửi">
+                            </div>
+                        </form>
+                    </div>
+                    <!--/Comment-Form-->
+
+                </div>
+            </div>
+            <!--Side-bar-->
+            <aside class="col-lg-3 col-md-4">
+                <div class="sidebar_widget">
+                    <div class="widget_heading">
+                        <h5>Tìm kiếm tin tức</h5>
+                    </div>
+                    <div class="blog_search">
+                        <form action="#" method="get">
+                            <input class="form-control" name="search" type="text" placeholder="tìm kiếm...">
+                            <button type="submit" class="search_btn"><i class="fa fa-search"
+                                    aria-hidden="true"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </aside>
+            <!--/Side-bar-->
+        </div>
+
+    </div>
+</section>
+<!--/Listing-detail-->
+
+
+<% include ../layout/footer.ejs %>
